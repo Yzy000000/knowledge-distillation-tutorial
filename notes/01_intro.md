@@ -49,7 +49,7 @@ $$
    $$
    \mathcal{L}_{\mathrm{soft}} = T^2 \cdot \mathrm{KL}(p_{\mathrm{teacher}} \| p_{\mathrm{student}})
    $$
-   其中 \(p_{\mathrm{teacher}}\) 和 \(p_{\mathrm{student}}\) 是教师和学生在温度 \(T\) 下的 softmax 输出。
+   其中 $p_{\mathrm{teacher}}$ 和 $p_{\mathrm{student}}$ 是教师和学生在温度 $T$ 下的 softmax 输出。
 
 2. **硬标签损失**：  
    $$
@@ -61,7 +61,7 @@ $$
 \mathcal{L} = \alpha \mathcal{L}_{\mathrm{soft}} + (1-\alpha) \mathcal{L}_{\mathrm{hard}}
 $$
 
-- \(\alpha\) 平衡两种损失，通常取 0.5~0.9。
+- $\alpha$ 平衡两种损失，通常取 0.5~0.9。
 ## 1.6 蒸馏的优势与局限
 
 | 优势 | 局限 |
