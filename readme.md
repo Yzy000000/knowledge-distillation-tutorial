@@ -14,7 +14,7 @@
 git clone https://github.com/yourusername/knowledge-distillation-tutorial.git
 cd knowledge-distillation-tutorial
 ```
-2. 安装依赖
+### 2. 安装依赖
 推荐使用 Python 3.8+ 和 PyTorch 2.0+，可通过 pip 一键安装：
 
 bash
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 bash
 conda env create -f environment.yaml
 conda activate kd_env
-3. 运行实验
+### 3. 运行实验
 Jupyter Notebook 方式：
 
 bash
@@ -36,7 +36,7 @@ jupyter notebook notebooks/distillation_tutorial.ipynb
 bash
 python scripts/train_teacher.py    # 训练教师模型
 python scripts/train_student.py    # 训练学生模型（单独与蒸馏）
-📊 实验结果
+### 4.实验结果
 模型	测试准确率
 Teacher (ResNet-34)	82.3%
 Student alone	70.1%
@@ -45,7 +45,7 @@ Student + Distillation	74.5%
 
 注：由于随机初始化，每次运行结果可能略有浮动。
 
-🔑 核心概念
+### 5.核心概念
 硬标签损失：标准交叉熵损失，让学生直接拟合真实标签。
 
 软标签损失：KL 散度，让学生模仿教师输出的概率分布（通常带温度参数 T）。
@@ -54,7 +54,7 @@ Student + Distillation	74.5%
 
 详细理论推导见 notes/ 目录。
 
-📦 依赖环境
+### 6.依赖环境
 主要依赖：
 
 Python 3.8+
@@ -69,8 +69,8 @@ numpy >= 1.21.0
 
 完整列表见 requirements.txt。
 
-📁 仓库结构
-text
+### 7.仓库结构
+```text
 .
 ├── README.md
 ├── requirements.txt
@@ -92,7 +92,8 @@ text
 │   ├── 04_analysis.md
 │   └── 05_summary.md
 └── assets/                   # 图片、公式等资源
-📝 学习笔记
+```
+### 8.学习笔记
 个人对知识蒸馏的理解记录在 notes/ 目录下，包括：
 
 引言与背景
@@ -107,10 +108,10 @@ text
 
 欢迎交流探讨！
 
-📜 许可证
+### 9.许可证
 本项目采用 MIT 许可证，详情见 LICENSE 文件。
 
-📚 参考文献
+### 10.参考文献
 Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the Knowledge in a Neural Network. arXiv preprint arXiv:1503.02531.
 
 PyTorch 官方教程：Knowledge Distillation Tutorial
