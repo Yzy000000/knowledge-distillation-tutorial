@@ -13,6 +13,7 @@
 ```bash
 git clone https://github.com/yourusername/knowledge-distillation-tutorial.git
 cd knowledge-distillation-tutorial
+```
 2. 安装依赖
 推荐使用 Python 3.8+ 和 PyTorch 2.0+，可通过 pip 一键安装：
 
