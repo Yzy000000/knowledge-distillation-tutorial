@@ -46,10 +46,10 @@ $$
 蒸馏的总损失通常为两部分：
 
 1. **软标签损失**（蒸馏损失）：  
-$$
-   mathcal{L}_{\text{soft}} = T^2 \cdot \text{KL}(p_{\text{teacher}} \| p_{\text{student}})
- $$
-   其中 (p_{\text{teacher}}\) 和 \(p_{\text{student}}\) 是教师和学生在温度 T 下的 softmax 输出。
+   $$
+   \mathcal{L}_{\text{soft}} = T^2 \cdot \text{KL}(p_{\text{teacher}} \| p_{\text{student}})
+   $$
+   其中 \(p_{\text{teacher}}\) 和 \(p_{\text{student}}\) 是教师和学生在温度 \(T\) 下的 softmax 输出。
 
 2. **硬标签损失**：  
    $$
