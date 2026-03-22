@@ -47,18 +47,18 @@ $$
 
 1. **软标签损失**（蒸馏损失）：  
    $$
-   \mathcal{L}_{\text{soft}} = T^2 \cdot \text{KL}(p_{\text{teacher}} \| p_{\text{student}})
+   \mathcal{L}_{\mathrm{soft}} = T^2 \cdot \mathrm{KL}(p_{\mathrm{teacher}} \| p_{\mathrm{student}})
    $$
-   其中 \(p_{\text{teacher}}\) 和 \(p_{\text{student}}\) 是教师和学生在温度 \(T\) 下的 softmax 输出。
+   其中 \(p_{\mathrm{teacher}}\) 和 \(p_{\mathrm{student}}\) 是教师和学生在温度 \(T\) 下的 softmax 输出。
 
 2. **硬标签损失**：  
    $$
-   \mathcal{L}_{\text{hard}} = \text{CrossEntropy}(y_{\text{true}}, p_{\text{student}})
+   \mathcal{L}_{\mathrm{hard}} = \mathrm{CrossEntropy}(y_{\mathrm{true}}, p_{\mathrm{student}})
    $$
 
 最终损失：  
 $$
-\mathcal{L} = \alpha \mathcal{L}_{\text{soft}} + (1-\alpha) \mathcal{L}_{\text{hard}}
+\mathcal{L} = \alpha \mathcal{L}_{\mathrm{soft}} + (1-\alpha) \mathcal{L}_{\mathrm{hard}}
 $$
 
 - \(\alpha\) 平衡两种损失，通常取 0.5~0.9。
