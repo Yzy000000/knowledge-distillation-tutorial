@@ -31,9 +31,9 @@
 
 为了让软标签的分布更加平滑（即“暗知识”更明显），蒸馏引入了 **温度 T**：
 
-\[
+$$
 q_i = \frac{\exp(z_i / T)}{\sum_j \exp(z_j / T)}
-\]
+$$
 
 - T=1：标准 Softmax
 - T>1：分布更平滑，小概率类别获得更多权重
@@ -46,20 +46,20 @@ q_i = \frac{\exp(z_i / T)}{\sum_j \exp(z_j / T)}
 蒸馏的总损失通常为两部分：
 
 1. **软标签损失**（蒸馏损失）：  
-   \[
-   \mathcal{L}_{\text{soft}} = T^2 \cdot \text{KL}(p_{\text{teacher}} \| p_{\text{student}})
-   \]
-   其中 \(p_{\text{teacher}}\) 和 \(p_{\text{student}}\) 是教师和学生在温度 T 下的 softmax 输出。
+$$
+   mathcal{L}_{\text{soft}} = T^2 \cdot \text{KL}(p_{\text{teacher}} \| p_{\text{student}})
+ $$
+   其中 (p_{\text{teacher}}\) 和 \(p_{\text{student}}\) 是教师和学生在温度 T 下的 softmax 输出。
 
 2. **硬标签损失**：  
-   \[
+   $$
    \mathcal{L}_{\text{hard}} = \text{CrossEntropy}(y_{\text{true}}, p_{\text{student}})
-   \]
+   $$
 
 最终损失：  
-\[
+$$
 \mathcal{L} = \alpha \mathcal{L}_{\text{soft}} + (1-\alpha) \mathcal{L}_{\text{hard}}
-\]
+$$
 
 - \(\alpha\) 平衡两种损失，通常取 0.5~0.9。
 
