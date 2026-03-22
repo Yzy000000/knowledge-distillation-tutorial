@@ -17,25 +17,29 @@ cd knowledge-distillation-tutorial
 ### 2. 安装依赖
 推荐使用 Python 3.8+ 和 PyTorch 2.0+，可通过 pip 一键安装：
 
-bash
+```bash
 pip install -r requirements.txt
+```
 或使用 conda：
 
-bash
+```bash
 conda env create -f environment.yaml
 conda activate kd_env
+```
 ### 3. 运行实验
 Jupyter Notebook 方式：
 
-bash
+```bash
 jupyter notebook notebooks/distillation_tutorial.ipynb
+```
 按顺序执行所有单元格即可复现实验。
 
 脚本方式（可选）：
 
-bash
+```bash
 python scripts/train_teacher.py    # 训练教师模型
 python scripts/train_student.py    # 训练学生模型（单独与蒸馏）
+```
 ### 4.实验结果
 模型	测试准确率
 Teacher (ResNet-34)	82.3%
@@ -56,7 +60,7 @@ Student + Distillation	74.5%
 
 ### 6.依赖环境
 主要依赖：
-
+```
 Python 3.8+
 
 PyTorch >= 2.0.0
@@ -66,7 +70,7 @@ torchvision >= 0.15.0
 matplotlib >= 3.5.0
 
 numpy >= 1.21.0
-
+```
 完整列表见 requirements.txt。
 
 ### 7.仓库结构
@@ -95,7 +99,7 @@ numpy >= 1.21.0
 ```
 ### 8.学习笔记
 个人对知识蒸馏的理解记录在 notes/ 目录下，包括：
-
+```
 引言与背景
 
 理论基础与公式推导
@@ -107,11 +111,13 @@ numpy >= 1.21.0
 总结与心得
 
 欢迎交流探讨！
-
+```
 ### 9.许可证
 本项目采用 MIT 许可证，详情见 LICENSE 文件。
 
 ### 10.参考文献
+```
 Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the Knowledge in a Neural Network. arXiv preprint arXiv:1503.02531.
 
 PyTorch 官方教程：Knowledge Distillation Tutorial
+```
